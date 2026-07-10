@@ -1,140 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Mike Campbell, CPA | Senior Accounting Manager & Controller</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Mike Campbell, CPA – Senior Accounting Manager & Controller specializing in SaaS accounting operations, financial reporting, dashboards, and forecasting." />
+  <meta charset="UTF-8">
+  <title>Mike – Accounting & Finance Leader | Power BI & SQL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accounting & finance leader with strong Power BI, SQL, and data modeling skills. Open to select projects and full-time roles.">
   <style>
     :root {
-      --bg: #0b0c10;
-      --card: #1f2833;
-      --accent: #66fcf1;
-      --accent-soft: #45a29e;
-      --text: #c5c6c7;
-      --white: #ffffff;
-      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --bg: #0f172a;
+      --bg-alt: #111827;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --card: #020617;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: var(--font-main);
-      background: var(--bg);
+      font-family: var(--font);
+      background: radial-gradient(circle at top, #1e293b 0, #020617 55%, #000 100%);
       color: var(--text);
       line-height: 1.6;
-      padding: 0;
     }
     .page {
-      max-width: 680px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 24px 16px 48px;
+      padding: 32px 20px 48px;
     }
     header {
-      margin-bottom: 28px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid #2b3645;
+      padding: 24px 20px 12px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(8, 47, 73, 0.9));
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.9);
     }
     h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      color: var(--white);
+      margin: 0 0 8px;
+      font-size: 1.9rem;
+      letter-spacing: 0.03em;
     }
-    h2 {
-      margin: 6px 0 0;
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--accent-soft);
-    }
-    .contact {
-      margin-top: 12px;
-      font-size: 0.95rem;
-      line-height: 1.4;
-    }
-    section {
-      margin-bottom: 32px;
-    }
-    section h3 {
-      margin: 0 0 12px;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent-soft);
-    }
-    .card {
-      background: var(--card);
-      border-radius: 10px;
-      padding: 16px;
-      border: 1px solid #2b3645;
+    .subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
       margin-bottom: 16px;
     }
-    .card h4 {
-      margin: 0 0 8px;
-      font-size: 1rem;
-      color: var(--white);
-    }
-    ul {
-      margin: 8px 0 0;
-      padding-left: 20px;
-      font-size: 0.92rem;
-    }
-    li {
-      margin-bottom: 6px;
-    }
-    .highlight {
-      color: var(--accent);
-      font-weight: 500;
-    }
-    .experience-item {
-      margin-bottom: 20px;
-    }
-    .experience-header {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      margin-bottom: 6px;
-    }
-    .experience-header span.company {
-      font-size: 1rem;
-      color: var(--accent-soft);
-      font-weight: 600;
-    }
-    .experience-header span.role {
-      font-size: 0.95rem;
-      color: var(--white);
-    }
-    .experience-header span.dates {
-      font-size: 0.85rem;
-      color: #8b94a5;
+    .tagline {
+      font-size: 1.02rem;
+      margin-bottom: 18px;
     }
     .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.8rem;
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.7);
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: background 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #0f172a;
+      font-weight: 600;
+      border-color: rgba(56, 189, 248, 0.9);
+    }
+    .btn-secondary {
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text);
+      border-color: rgba(148, 163, 184, 0.6);
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.05);
+    }
+    main {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.6fr);
+      gap: 22px;
+    }
+    section {
+      background: rgba(15, 23, 42, 0.92);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 18px 16px 16px;
+    }
+    section h2 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #cbd5f5;
+    }
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      margin-bottom: 8px;
+      font-size: 0.92rem;
+    }
+    li span.label {
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+    .chip-row {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
       margin-top: 8px;
     }
-    .pill {
-      font-size: 0.78rem;
-      padding: 4px 8px;
+    .chip {
+      font-size: 0.8rem;
+      padding: 3px 8px;
       border-radius: 999px;
-      background: #111822;
-      border: 1px solid #2b3645;
+      background: var(--accent-soft);
+      color: #bae6fd;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+    }
+    .note {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-top: 8px;
     }
     footer {
-      margin-top: 32px;
-      font-size: 0.85rem;
-      color: #8b94a5;
-      border-top: 1px solid #2b3645;
-      padding-top: 12px;
+      margin-top: 26px;
+      padding: 12px 4px 0;
+      font-size: 0.8rem;
+      color: var(--muted);
       text-align: center;
     }
-
-    /* Desktop Enhancements */
-    @media (min-width: 768px) {
-      h1 { font-size: 2rem; }
-      .page { padding: 32px 24px 64px; }
-      .experience-header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: baseline;
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      header {
+        padding: 20px 16px 12px;
       }
     }
   </style>
@@ -142,150 +174,138 @@
 <body>
   <div class="page">
     <header>
-      <h1>Mike Campbell, CPA</h1>
-      <h2>Head of Accounting & Finance • SaaS Accounting Operations</h2>
-      <div class="contact">
-        Louisville, KY<br />
-        <a href="mailto:MikeCampbellCPA@outlook.com">MikeCampbellCPA@outlook.com</a><br />
-        <a href="https://www.linkedin.com/in/mikecampbellcpa" target="_blank">LinkedIn.com/in/MikeCampbellCPA</a><br />
-        MikeCampbell.biz
+      <h1>Mike Campbell - Accounting & Finance Leader</h1>
+      <div class="subtitle">
+        Controller / Director / VP Finance - 25+ years leading small teams
+      </div>
+      <div class="tagline">
+        I build clean, reliable financial operations and work hands-on with data-PowerQuery, Power BI, SQL, and reporting.
+      </div>
+      <div class="pill-row">
+        <div class="pill">Operational Finance &amp; Accounting</div>
+        <div class="pill">Audit Readiness &amp; Controls</div>
+        <div class="pill">Power BI &amp; SQL</div>
+        <div class="pill">Data Normalization &amp; Dashboards</div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:youremail@example.com?subject=Project%20Inquiry%20-%20Power%20BI%20%2F%20SQL">
+          <span>Open to select projects</span>
+        </a>
+        <a class="btn btn-secondary" href="#focus">
+          <span>View skills &amp; focus</span>
+        </a>
+        <a class="btn btn-secondary" href="#experience">
+          <span>View experience</span>
+        </a>
       </div>
     </header>
 
-    <section>
-      <h3>Profile</h3>
-      <div class="card">
-        <p>
-          Accounting & Finance Professional with 30+ years leading 
-          <span class="highlight">general ledger, month-end close, financial reporting, audit preparation, revenue recognition, and accounting operations</span>.
-          Extensive experience partnering with CFOs and CEOs in SaaS, technology, and multi-entity environments.
+    <main>
+      <section id="focus">
+        <h2>Technical focus</h2>
+        <p class="section-subtitle">
+          I’m an operator first, but I enjoy working directly with data and tooling.
         </p>
         <ul>
-          <li>Expert in <span class="highlight">ASC 606</span>, deferred revenue, and SaaS accounting.</li>
-          <li>Builds reliable, audit-ready accounting processes and internal controls.</li>
-          <li>Advanced reporting using <span class="highlight">Power BI, SQL, DAX, Sage Intelligence</span>.</li>
-          <li>Strong systems background: <span class="highlight">NetSuite, Sage 100, Deltek Vision, Dynamics NAV</span>.</li>
+          <li>
+            <span class="label">PowerQuery &amp; data shaping:</span>
+            building repeatable transformations, cleaning source data, and preparing models for reporting.
+          </li>
+          <li>
+            <span class="label">Power BI &amp; dashboards:</span>
+            modeling data, defining measures, and designing executive views that are actually used.
+          </li>
+          <li>
+            <span class="label">SQL &amp; normalization:</span>
+            querying, joining, and restructuring data to support accurate reporting and analysis.
+          </li>
+          <li>
+            <span class="label">Reporting &amp; metrics:</span>
+            financial and SaaS metrics (ARR, churn, cohorts, product mix) for leadership and board packs.
+          </li>
         </ul>
-      </div>
-    </section>
-
-    <section>
-      <h3>Services</h3>
-      <div class="card">
-        <h4>For SaaS Companies</h4>
-        <ul>
-          <li>Senior Accounting Manager / Controller responsibilities.</li>
-          <li>Month-end close, reconciliations, GL accuracy, audit support.</li>
-          <li>ASC 606 revenue recognition and deferred revenue schedules.</li>
-          <li>Multi-entity consolidations and intercompany accounting.</li>
-          <li>Building accounting processes for scale and reliability.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h4>For Business Leaders</h4>
-        <ul>
-          <li>Power BI dashboards (financial, operational, KPI reporting).</li>
-          <li>Data mining and normalization using SQL & DAX.</li>
-          <li>Budgeting frameworks, rolling forecasts, scenario modeling.</li>
-          <li>Custom reporting packages and board-ready financials.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <h3>Experience</h3>
-
-      <div class="experience-item">
-        <div class="experience-header">
-          <span class="company">Venminder</span>
-          <span class="role">Chief Accounting Officer • Chief Financial Officer</span>
-          <span class="dates">2016–2025</span>
+        <div class="chip-row">
+          <div class="chip">PowerQuery</div>
+          <div class="chip">Power BI</div>
+          <div class="chip">SQL</div>
+          <div class="chip">Data Modeling</div>
+          <div class="chip">Financial Reporting</div>
+          <div class="chip">SaaS Metrics</div>
         </div>
-        <ul>
-          <li>Oversaw accounting operations during growth from <span class="highlight">$2M → $36M</span> revenue.</li>
-          <li>Implemented <span class="highlight">NetSuite</span> for ASC 606 and deferred revenue automation.</li>
-          <li>Managed GL, AP, AR, payroll, month-end close, and audit preparation.</li>
-          <li>Built Power BI reporting for financial and operational visibility.</li>
-        </ul>
-        <div class="pill-row">
-          <span class="pill">ASC 606</span>
-          <span class="pill">NetSuite</span>
-          <span class="pill">Power BI</span>
-          <span class="pill">Audit Readiness</span>
-        </div>
-      </div>
+      </section>
 
-      <div class="experience-item">
-        <div class="experience-header">
-          <span class="company">Donan Engineering</span>
-          <span class="role">Chief Financial Officer • Controller</span>
-          <span class="dates">2004–2013</span>
-        </div>
-        <ul>
-          <li>Led accounting during expansion from <span class="highlight">$6M → $35M</span> revenue.</li>
-          <li>Implemented private-cloud ERP on <span class="highlight">Deltek Vision</span>.</li>
-          <li>Built internal controls and standardized reporting processes.</li>
-          <li>Developed dashboards using ASP.NET, SQL, and Tableau.</li>
-        </ul>
-        <div class="pill-row">
-          <span class="pill">ERP Systems</span>
-          <span class="pill">Internal Controls</span>
-          <span class="pill">Financial Reporting</span>
-        </div>
-      </div>
-
-      <div class="experience-item">
-        <div class="experience-header">
-          <span class="company">Dismas Charities</span>
-          <span class="role">Chief Financial Officer</span>
-          <span class="dates">2013–2015</span>
-        </div>
-        <ul>
-          <li>Managed accounting for 30+ facilities nationwide.</li>
-          <li>Reduced costs by <span class="highlight">$550K</span> through process improvements.</li>
-          <li>Shortened month-end close by <span class="highlight">20+ days</span>.</li>
-        </ul>
-        <div class="pill-row">
-          <span class="pill">Process Improvement</span>
-          <span class="pill">Cost Reduction</span>
-          <span class="pill">Close Optimization</span>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h3>Tools</h3>
-      <div class="card">
-        <p><span class="highlight">Accounting Systems</span>: NetSuite, Sage 100, Sage Intelligence, Deltek Vision, Dynamics NAV</p>
-        <p><span class="highlight">Analytics</span>: Power BI, SQL, DAX, Excel modeling, Tableau</p>
-        <p><span class="highlight">Core Accounting</span>: GL, AP/AR, payroll, reconciliations, audit prep, internal controls</p>
-        <p><span class="highlight">Reporting</span>: Financial statements, KPI dashboards, board packages</p>
-      </div>
-    </section>
-
-    <section>
-      <h3>Contact</h3>
-      <div class="card">
-        <p>
-          Open to Senior Accounting Manager, Controller, and operational finance roles.  
-          Also available for project-based dashboarding, reporting, and forecasting work.
+      <section>
+        <h2>How I work</h2>
+        <p class="section-subtitle">
+          Open to small, well-defined projects and long-term roles where execution and clarity matter.
         </p>
-        <p>
-          Email: <a href="mailto:MikeCampbellCPA@outlook.com">MikeCampbellCPA@outlook.com</a><br />
-          LinkedIn: <a href="https://www.linkedin.com/in/mikecampbellcpa" target="_blank">Connect on LinkedIn</a>
+        <ul>
+          <li>
+            <span class="label">Select projects:</span>
+            short engagements focused on data cleanup, reporting, dashboards, or finance process improvements.
+          </li>
+          <li>
+            <span class="label">Operator, not pitch-deck CFO:</span>
+            I support CFOs and founders by owning the accounting and reporting foundation.
+          </li>
+          <li>
+            <span class="label">Full-time oriented:</span>
+            primarily interested in full-time Controller / Director / VP Finance roles; fractional work is a bridge, not the destination.
+          </li>
+          <li>
+            <span class="label">Small-team leadership:</span>
+            25+ years managing compact teams in SaaS, manufacturing, and services.
+          </li>
+        </ul>
+        <p class="note">
+          If you’re a founder or CFO who needs cleaner data, better reporting, or a steadier finance function, I’m open to a conversation.
         </p>
-      </div>
-    </section>
+      </section>
+            
+    </main>
+
+<br>
+<section id="experience">
+  <h2>Experience</h2>
+  <p class="section-subtitle">Leadership roles across SaaS, services, and manufacturing.</p>
+
+  <ul>
+    <li>
+      <span class="label">Mills Supply - Chief Financial Officer</span><br>
+      Led finance and accounting during a period shaped by rising steel input costs, tariff impacts, and higher interest rates. Owned forecasting, cash-flow modeling, banking relationships, and pricing analysis while stabilizing reporting for the founder. Managed a small team responsible for GL, month-end close, and job-costing accuracy.
+    </li>
+    
+    <li>
+      <span class="label">Venminder - Chief Accounting Officer</span><br>
+      Directed accounting operations for a fast-growing SaaS company, overseeing GL, month-end close, ASC 606, audit readiness, and multi-entity reporting. Partnered with the CFO through due diligence and a successful exit, delivering clean financials, strong controls, and reliable data. Produced customer, cohort, product-mix, and SaaS performance metrics that supported executive and VC strategy planning.
+    </li>
+
+    <li>
+      <span class="label">Dismas Charities - Chief Financial Officer</span><br>
+      Recruited by the board during a succession-planning transition to stabilize finance and operations. Led the organization through multiple regulatory audits, restored compliance, improved insurance positioning, and rebuilt billing processes. Delivered clean reporting, stronger controls, and operational reliability that supported leadership continuity.
+    </li>
+
+    <li>
+      <span class="label">Donan - Chief Financial Officer</span><br>
+      Oversaw finance and accounting for a national forensic engineering firm, managing budgeting, forecasting, cash flow, and multi-location reporting. Led a small team responsible for clean financial operations, audit preparation, and system improvements. Supported executive leadership with disciplined financial management during organizational change.
+    </li>
+
+    <li> 
+      <span class="label">Public Accounting – EY & Mather & Co. CPAs</span><br>  
+      Delivered high-impact results early in career through diverse audit engagements across healthcare, manufacturing, nonprofit, and 401(k) clients. Improved audit efficiency by tightening testing scopes and resolving complex accounting issues directly with client controllers. Expanded capabilities at Mather by serving as a Sage MAS90 consultant, leading system implementations, streamlining workflows, and strengthening financial reporting for small and mid-sized businesses.
+    </li>
+    
+  </ul>
+</section>
+
 
     <footer>
-      &copy; <span id="year"></span> Mike Campbell, CPA — MikeCampbell.biz
+      <div>Based in Southern Indiana near Louisville, KY.</div>
+      <div style="margin-top:4px;">
+        Contact: <a href="mailto:mikecampbellcpa@outlook.com" style="color:#93c5fd;text-decoration:none;">mikecampbellcpa@outlook.com</a>
+      </div>
     </footer>
   </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
-<!--filename: index-resume-mobile.html-->
+<!--filename: index-resume-260709v02.html -->
