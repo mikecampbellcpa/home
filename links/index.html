@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mike Campbell | Links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.15);
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: #1f2937;
+      --radius-lg: 18px;
+      --radius-sm: 999px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.85);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0, #020617 55%, #000 100%);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: 520px;
+      background: linear-gradient(145deg, #020617 0, #020617 40%, #0b1120 100%);
+      border-radius: 28px;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      box-shadow: var(--shadow-soft);
+      padding: 26px 24px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .shell::before {
+      content: "";
+      position: absolute;
+      inset: -120px;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.18) 0, transparent 55%),
+        radial-gradient(circle at 100% 0%, rgba(129, 140, 248, 0.16) 0, transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .shell-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 20px;
+      background: radial-gradient(circle at 30% 0%, #38bdf8 0, #0f172a 40%, #020617 100%);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 22px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .title-block {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .title-main {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .title-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .badge {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.18);
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .link-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.12) 0, transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(15, 23, 42, 0.9) 0, #020617 55%);
+      padding: 11px 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      transition:
+        border-color 0.16s ease,
+        background 0.16s ease,
+        transform 0.12s ease,
+        box-shadow 0.12s ease;
+    }
+
+    .link-card:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.18) 0, transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(15, 23, 42, 0.95) 0, #020617 55%);
+      transform: translateY(-1px);
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.9);
+    }
+
+    .link-main {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .link-label {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--text-main);
+    }
+
+    .link-url {
+      font-size: 12px;
+      color: var(--text-muted);
+      word-break: break-all;
+    }
+
+    .link-pill {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      background: var(--accent-soft);
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .footer {
+      margin-top: 16px;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 11px;
+      color: var(--text-muted);
+      opacity: 0.8;
+    }
+
+    @media (max-width: 480px) {
+      .shell {
+        padding: 22px 18px 18px;
+        border-radius: 22px;
+      }
+
+      .header {
+        gap: 12px;
+      }
+
+      .avatar {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+      }
+
+      .title-main {
+        font-size: 18px;
+      }
+
+      .link-card {
+        padding: 10px 11px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="shell-inner">
+      <header class="header">
+        <div class="avatar">MC</div>
+        <div class="title-block">
+          <div class="title-main">Mike Campbell, CPA</div>
+          <div class="title-sub">Accounting · Tech · Josephology · Writing</div>
+          <div class="badge-row">
+            <span class="badge">
+              <span class="badge-dot"></span>
+              <span>Link hub</span>
+            </span>
+            <span class="badge">
+              <span>mikecampbell.info</span>
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <section class="links">
+        <a class="link-card" href="https://mikecampbell.info" target="_blank" rel="noopener noreferrer">
+          <div class="link-main">
+            <span class="link-label">Link hub</span>
+            <span class="link-url">mikecampbell.info</span>
+          </div>
+          <span class="link-pill">
+            <span class="pill-dot"></span>
+            Primary hub
+          </span>
+        </a>
+
+        <a class="link-card" href="https://mikecampbell.biz" target="_blank" rel="noopener noreferrer">
+          <div class="link-main">
+            <span class="link-label">Homepage</span>
+            <span class="link-url">mikecampbell.biz</span>
+          </div>
+          <span class="link-pill">
+            <span class="pill-dot"></span>
+            Professional Services
+          </span>
+        </a>
+ <!--
+        <a class="link-card" href="https://mikecampbell.accountant" target="_blank" rel="noopener noreferrer">
+          <div class="link-main">
+            <span class="link-label">Accounting</span>
+            <span class="link-url">mikecampbell.accountant</span>
+          </div>
+          <span class="link-pill">
+            <span class="pill-dot"></span>
+            Finance & strategy
+          </span>
+        </a>
+-->
+
+        <a class="link-card" href="https://www.linkedin.com/in/mikecampbellcpa" target="_blank" rel="noopener noreferrer">
+          <div class="link-main">
+            <span class="link-label">LinkedIn</span>
+            <span class="link-url">linkedin.com/in/mikecampbellcpa</span>
+          </div>
+          <span class="link-pill">
+            <span class="pill-dot"></span>
+            Professional profile
+          </span>
+        </a>
+
+        <a class="link-card" href="https://github.com/mikecampbellcpa" target="_blank" rel="noopener noreferrer">
+          <div class="link-main">
+            <span class="link-label">GitHub</span>
+            <span class="link-url">https://github.com/mikecampbellcpa</span>
+          </div>
+          <span class="link-pill">
+            <span class="pill-dot"></span>
+            Tech Projects
+          </span>
+        </a>
+ 
+        <a class="link-card" href="https://mikecampbell.faith" target="_blank" rel="noopener noreferrer">
+          <div class="link-main">
+            <span class="link-label">Josephology</span>
+            <span class="link-url">mikecampbell.faith</span>
+          </div>
+          <span class="link-pill">
+            <span class="pill-dot"></span>
+            Faith & Theology
+          </span>
+        </a>
+<!--        
+        <a class="link-card" href="https://mikecampbell153.substack.com/" target="_blank" rel="noopener noreferrer">
+          <div class="link-main">
+            <span class="link-label">SubStack</span>
+            <span class="link-url">https://mikecampbell153.substack.com/</span>
+          </div>
+          <span class="link-pill">
+            <span class="pill-dot"></span>
+            Writing
+          </span>
+        </a>
+ -->
+      </section>
+
+      <footer class="footer">
+        <span>Built for focus, not noise.</span>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
